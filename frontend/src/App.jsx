@@ -59,11 +59,11 @@ const App = () => {
   };
 
   return (
-    <div>
+    <section className="app-section">
       <h1>Samuel räknar ner!</h1>
       <EventForm addEvent={addEvent} />
       <EventList events={events} onDeleteEvent={deleteEvent}/>
-    </div>
+    </section>
   );
 };
 

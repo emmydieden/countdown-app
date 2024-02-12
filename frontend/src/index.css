@@ -1,6 +1,39 @@
 * {
     margin: 0; 
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 109, 133);
-    color: white; 
+}
+
+body {
+    background-color: red; 
+    display: flex; 
+    justify-content: center;
+    
+}
+
+.app-section {
+    margin: 20px; 
+    padding: 20px;
+    background-color: pink; 
+    height: 100vh; 
+    border-radius: 10px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.event-card {
+    background-color: white;
+    margin: 10px; 
+    padding: 10px; 
+    border-radius: 10px;
+}
+
+.calender {
+    padding: 5px; 
+    border: none;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
 }

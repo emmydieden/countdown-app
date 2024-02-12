@@ -1,9 +1,10 @@
 
 import React from 'react';
-import CountdownTimer from './CountdownTimer';
+import { EventCard } from './EventCard';
 
 
 const EventList = ({ events, onDeleteEvent }) => {
+  const sortedEvents = events.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   const handleDelete = (_id) => {
     console.log('Deleting event with id:', events);
     // Pass the id to the onDeleteEvent callback
@@ -13,16 +14,9 @@ const EventList = ({ events, onDeleteEvent }) => {
   return (
     <div>
       <h2>Event List</h2>
-      <ul>
-        {events.map((event) => (
-        
-          <li key={event._id}>
-            <strong>{event.name}</strong> - {event.date.toLocaleString()}{' '}
-            <CountdownTimer eventDate={event.date} />
-            <button onClick={() => handleDelete(event._id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+     
+       <EventCard events={sortedEvents} handleDelete={handleDelete}/>
+    
     </div>
   );
 };

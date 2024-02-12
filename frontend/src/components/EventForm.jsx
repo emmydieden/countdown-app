@@ -14,7 +14,8 @@ const EventForm = ({ addEvent }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form-section"onSubmit={handleSubmit}>
+      {console.log(eventDate)}
       <label>
         Event Name:
         <input
@@ -26,6 +27,7 @@ const EventForm = ({ addEvent }) => {
       <label>
         Event Date:
         <input
+          className="calender"
           type="datetime-local"
           value={eventDate}
           onChange={(e) => setEventDate(e.target.value)}
